@@ -1,6 +1,7 @@
 import { Link, Spacer, Text, useTheme } from "@nextui-org/react";
 import NextLink from "next/link";
 import Image from "next/image";
+import { getRandomArbitrary } from "../../utils";
 
 export const Navbar = () => {
 
@@ -19,7 +20,7 @@ export const Navbar = () => {
 
           <>
             <Image
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getRandomArbitrary(1, 151)}.png`}
               alt="icono de la app"
               width={70}
               height={70}
@@ -27,7 +28,7 @@ export const Navbar = () => {
             <NextLink href='/' passHref style={{cursor: 'pointer'}}>
               <Link>
                 <Text color='white' h2>P</Text>
-                <Text color='white' h3>okémon</Text>
+                <Text color='white' h3>okéland</Text>
               </Link>
            </NextLink>
           </>
